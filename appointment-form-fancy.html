@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book a free consultation</title>
+  <style>
+    :root { --bg:#0f172a; --card:#111827; --accent:#f5c542; --muted:#94a3b8; --text:#e5e7eb; }
+    html,body{height:100%}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; background:linear-gradient(160deg,#0b1224,#0e1530 60%,#0b1224); color:var(--text); display:grid;place-items:center;padding:32px}
+    .container{width:100%;max-width:860px}
+    .title{text-align:center;margin-bottom:18px}
+    .title h1{margin:0 0 6px;font-size:clamp(24px,4vw,34px)}
+    .title p{margin:0;color:var(--muted)}
+    .badge{display:inline-block;padding:2px 8px;border-radius:12px;background:rgba(245,197,66,.15);color:var(--accent);font-weight:700;margin-left:6px;font-size:12px}
+    .card{background:radial-gradient(1200px 600px at -15% -25%,rgba(245,197,66,.07),transparent 40%),radial-gradient(1000px 600px at 110% 120%,rgba(245,197,66,.06),transparent 40%),var(--card); border:1px solid rgba(255,255,255,.06); border-radius:18px; padding:22px; box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    form{display:grid;gap:14px}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    label{font-size:14px;color:var(--text);display:block;margin-bottom:6px}
+    input,textarea{width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:#0b1020;color:var(--text)}
+    input:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(245,197,66,.12);outline:none}
+    .muted{color:var(--muted);font-size:13px}
+    .policy{font-size:12.5px;color:var(--muted);line-height:1.5}
+    .policy a{color:var(--accent);text-decoration:none}
+    .actions{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    .btn{background:var(--accent);color:#1a1a1a;border:none;padding:12px 18px;border-radius:12px;font-weight:700;cursor:pointer}
+    .btn[disabled]{opacity:.7;cursor:not-allowed}
+    .alert{display:none;padding:12px 14px;border-radius:12px;font-size:14px}
+    .alert.success{background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);color:#d1fae5}
+    .alert.error{background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.35);color:#fee2e2}
+    @media(max-width:700px){.row{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">
+      <h1>Book a free consultation <span class="badge">BACKEND</span></h1>
+      <p class="muted">Pick a date and time that works for you. We'll confirm by email.</p>
+    </div>
+
+    <div class="card">
+      <div id="form-alert" class="alert" role="alert"></div>
+
+      <form id="booking-form" novalidate>
+        <div class="row">
+          <div>
+            <label for="firstName">First name</label>
+            <input id="firstName" name="firstName" type="text" placeholder="Jane" required />
+          </div>
+          <div>
+            <label for="lastName">Last name</label>
+            <input id="lastName" name="lastName" type="text" placeholder="Doe" required />
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+          <div>
+            <label for="phone">Call number</label>
+            <input id="phone" name="phone" type="tel" placeholder="(555) 555-1234" required />
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="date">Preferred date</label>
+            <input id="date" name="date" type="date" required />
+          </div>
+          <div>
+            <label for="time">Preferred time</label>
+            <input id="time" name="time" type="time" required />
+          </div>
+        </div>
+        <div>
+          <label for="notes">Notes (optional)</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Tell us a bit about your needs..."></textarea>
+        </div>
+        <div class="actions">
+          <button type="submit" id="submitBtn" class="btn">Book now</button>
+          <span class="muted">We’ll email a confirmation to <strong>info@elitebooksolution.com</strong>.</span>
+        </div>
+        <p class="policy">
+          <strong>Privacy notice:</strong> By submitting this form you consent to EliteBook Solutions storing and processing your information to schedule your consultation and follow up with you. We do not sell your data. You may request deletion at any time by emailing <a href="mailto:info@elitebooksolution.com">info@elitebooksolution.com</a>.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const API_ENDPOINT = 'http://localhost:4000/api/book';
+    const dateInput = document.getElementById('date');
+    dateInput.min = new Date().toISOString().split('T')[0];
+
+    function showAlert(type, message){ const el=document.getElementById('form-alert'); el.className=`alert ${type}`; el.textContent=message; el.style.display='block'; }
+    function clearAlert(){ const el=document.getElementById('form-alert'); el.style.display='none'; el.textContent=''; el.className='alert'; }
+    function setBusy(b){ const btn=document.getElementById('submitBtn'); btn.disabled=!!b; btn.textContent=b?'Booking…':'Book now'; }
+
+    async function sendViaBackend(payload){
+      try{
+        const res=await fetch(API_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+        const text=await res.text().catch(()=>'');
+        if(!res.ok){ return {ok:false,status:res.status,error:text||'Backend responded with error'};}
+        return {ok:true,body:text};
+      }catch(e){ return {ok:false,error:e?.message||'Network error'}; }
+    }
+
+    document.getElementById('booking-form').addEventListener('submit', async (e)=>{
+      e.preventDefault(); clearAlert(); setBusy(true);
+      const payload={
+        firstName:document.getElementById('firstName').value.trim(),
+        lastName:document.getElementById('lastName').value.trim(),
+        email:document.getElementById('email').value.trim(),
+        phone:document.getElementById('phone').value.trim(),
+        date:document.getElementById('date').value,
+        time:document.getElementById('time').value,
+        notes:document.getElementById('notes').value.trim(),
+        recipient:'info@elitebooksolution.com'
+      };
+      for(const k of ['firstName','lastName','email','phone','date','time']){ if(!payload[k]){ showAlert('error','Please complete all required fields.'); setBusy(false); return; } }
+      const result=await sendViaBackend(payload);
+      if(result.ok){ showAlert('success','Thanks! Your request was sent. We\'ll email you shortly.'); e.target.reset(); }
+      else{ showAlert('error',`${result.error||'Something went wrong.'}`); }
+      setBusy(false);
+    });
+  </script>
+</body>
+</html>
