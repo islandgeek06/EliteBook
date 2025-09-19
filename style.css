@@ -45,6 +45,121 @@ ul {
     text-decoration: none;
 }
 
+/* =======BUTTONS */
+   .eb-link-btn {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 12px;
+    position: relative;
+    padding: 6px 4px;
+    transition: color 0.3s ease;
+  }
+
+  /* Booking Button */
+  .eb-link-booking {
+    color: #C8A84E;
+    font-family: "Ubuntu", serif;
+    font-size: 2rem;
+  }
+  .eb-link-booking::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #C8A84E;
+    transition: width 0.3s ease;
+  }
+  .eb-link-booking:hover {
+    color:  #2E8B57;
+  }
+  .eb-link-booking:hover::after {
+    width: 100%;
+    left: 0;
+    background: #C8A84E;
+  }
+
+  /* Services Button */
+  .eb-link-services {
+    color: #1F6B3A;
+    font-family: "Ubuntu", serif;
+    font-size: 2rem;
+  }
+  .eb-link-services::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #1F6B3A;
+    transition: width 0.3s ease;
+  }
+  .eb-link-services:hover {
+    color: #C8A84E;
+  }
+  .eb-link-services:hover::after {
+    width: 100%;
+    left: 0;
+    background: #2E8B57;
+  }
+
+/* =========SECONDARY BUTTON */
+ .eb-btn {
+    font-family: "Ubuntu", serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 12px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: all .2s ease;
+    cursor: pointer;
+    user-select: none;
+    width: max-content;
+    margin-top: 1rem;
+  }
+
+  /* Secondary (Outline) */
+  .eb-btn--secondary {
+    color: #1F6B3A;              /* EliteBook green */
+    border: 2px solid #1F6B3A;
+    background: transparent;
+  }
+  .eb-btn--secondary:hover {
+    background: rgba(31,107,58,.06);
+  }
+  .eb-btn--secondary:active {
+    transform: translateY(1px);
+  }
+  .eb-btn--secondary:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(31,107,58,.25);
+  }
+
+  /* Optional icon sizing */
+  .eb-btn svg { width: 18px; height: 18px; }
+
+  /* Dark mode tweak (optional) */
+  @media (prefers-color-scheme: dark) {
+    .eb-btn--secondary {
+      color: #C8E1D1;            /* lighter green for contrast */
+      border-color: #2E8B57;     /* accent green */
+    }
+    .eb-btn--secondary:hover {
+      background: rgba(46,139,87,.18);
+    }
+  }
+
+
 /* *************NAVIGATION */
 .site-header{
   position: sticky; 
@@ -79,7 +194,7 @@ ul {
     }
 
     .brand img { 
-      width: 40%; 
+      width: 30%; 
       display:block; 
     }
 
@@ -109,7 +224,7 @@ ul {
     }
 
     nav a.home-link { 
-      color: rgb(233, 165, 28); 
+      color: rgb(200, 168, 78); 
       font-family: "Ubuntu", serif;
     }
 
@@ -519,8 +634,37 @@ h1.tagline {
 }
 
 /* =============SECTION ONE ABOUT US======= */
+ .eb-about-4 {  
+  display:inline-block; 
+  margin:26px 0;
+}
+
+  .eb-about-4 h3 {
+    font-family: "Ubuntu", serif;
+    font-weight:700; 
+    margin:0; 
+    position:relative;
+    font-size:clamp(1.7rem,3.8vw,2.5rem);
+    text-transform: capitalize;
+    color: #2E8B57;
+  }
+    
+  
+    .eb-about-4 h3::after {
+    content:""; 
+    position:absolute; 
+    left:0; 
+    bottom:-8px; 
+    height:3px; 
+    width:56%;
+    background:linear-gradient(90deg,#C8A84E,#1F6B3A); border-radius:2px;
+  }
+
+
+
+
 .just-us {
-    background: linear-gradient(120deg, rgb(172, 155, 113) 2%, #044645 60%);
+    background: linear-gradient(120deg, rgb(200, 168, 78) 2%, #1F6B3A 60%);
     width: 100%;
     height: 100vh;
 }
@@ -774,7 +918,7 @@ h1.tagline {
     #hc-title {
       margin:0 0 .35rem; text-align:center;
       font-size: clamp(1.8rem, 3.6vw, 2.4rem);
-      color: rgb(233, 165, 28);
+      color: rgb(200, 168, 78);
       letter-spacing:.2px;
       font-family: "Ubuntu", serif;
       text-transform: capitalize;
@@ -1172,7 +1316,7 @@ h1.tagline {
     display: grid;
     place-items: center;
     /* background-color: #000; */
-    margin-bottom: 5rem;
+   
     background:
   radial-gradient(1200px 600px at 90% -20%, color-mix(in srgb, var(--gold) 12%, transparent), transparent),
   radial-gradient(1000px 600px at 0% 120%, color-mix(in srgb, var(--deep-teal) 12%, transparent), transparent),
@@ -1211,7 +1355,7 @@ h1.tagline {
     font-size: 3rem;
     letter-spacing: 0.2px;
     font-weight: bold;
-    color: rgb(233, 165, 28);
+    color: rgb(200, 168, 78);
 }
 .bn-sub {
     margin: 0.25rem 0 0;
@@ -1299,6 +1443,7 @@ h1.tagline {
       font-family: "Ubuntu", serif;
       margin-bottom: 10rem;
       color: var(--ink);
+      margin-top: 8rem;
     }
 
     .uc-wrap { 
@@ -1391,18 +1536,18 @@ h1.tagline {
       font-weight:800; 
       letter-spacing:.12em; 
       text-transform:uppercase;
-      color: rgb(233, 165, 28);
+      color: rgb(207, 230, 245);
     }
     .uc-title { 
       margin:0; 
       font-size:1.05rem; 
-      color: rgb(207, 230, 245); 
+      color: rgb(200, 168, 78); 
       font-weight:800; 
     }
 
     .uc-text { 
       margin:0; 
-      color: color-mix(in srgb, rgb(233, 165, 28) 85%, transparent); 
+      color: color-mix(in srgb, rgb(207, 230, 245) 85%, transparent); 
       line-height:1.55; 
       letter-spacing: 2px;
     }
@@ -1419,10 +1564,10 @@ h1.tagline {
     .uc-chip{
       padding:.28rem .55rem; 
       border-radius:999px;
-      background: color-mix(in srgb, rgb(233, 165, 28) 10%, transparent);
-      color: rgb(207, 230, 245); 
+      background: color-mix(in srgb, rgb(207, 230, 245) 10%, transparent);
+      color: rgb(200, 168, 78); 
       font-weight:700;
-      border:1px solid color-mix(in srgb, rgb(233, 165, 28) 22%, transparent);
+      border:1px solid color-mix(in srgb, rgb(207, 230, 245) 22%, transparent);
     }
 
     .uc-cta {
@@ -1634,10 +1779,11 @@ h1.tagline {
       gap:1rem; 
       text-decoration:none;
       color: var(--deep-teal);
+      width: 100%;
     }
 
     .logo-img{
-      width:min(190px, 45vw) !important;
+      width:min(250px, 45vw) !important; 
       block-size:auto;
       display:block;
       filter: drop-shadow(0 6px 18px color-mix(in srgb, var(--deep-teal) 18%, transparent));
@@ -1661,7 +1807,7 @@ h1.tagline {
 
     .footer-col h4{
       margin:0 0 .6rem;
-      color: rgb(233, 165, 28);
+      color: rgb(200, 168, 78);
       font-family: "Ubuntu", serif;
       font-size:2rem; 
       letter-spacing:.3px;

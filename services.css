@@ -1003,7 +1003,7 @@
     }
 
     .logo-img{
-      width:min(190px, 45vw) !important;
+      width:min(250px, 45vw) !important;
       block-size:auto;
       display:block;
       filter: drop-shadow(0 6px 18px color-mix(in srgb, var(--deep-teal) 18%, transparent));
