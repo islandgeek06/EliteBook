@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // mobile nav toggle
 (function(){
       const toggle = document.getElementById('navToggle');
@@ -180,101 +180,6 @@
     })();
 
 
-// (function(){
-//   const track = document.getElementById('cfTrack');
-//   const cards = Array.from(track.querySelectorAll('.cf-card'));
-//   const prev = document.getElementById('cfPrev');
-//   const next = document.getElementById('cfNext');
-//   const idxEl = document.getElementById('cfIndex');
-
-//   let index = 0; 
-//   let autoPlayInterval;
-
-//   function clamp(n, min, max){ return Math.max(min, Math.min(n, max)); }
-
-//  function applyCoverflow(){
-//   cards.forEach((card, i) => {
-//     const offset = i - index;
-//     card.classList.remove('is-center','is-left','is-right','is-left-2','is-right-2');
-//     card.setAttribute('aria-selected', offset === 0 ? 'true' : 'false');
-
-//     if(offset === 0) card.classList.add('is-center');
-//     else if(offset === -1) card.classList.add('is-left');
-//     else if(offset === 1) card.classList.add('is-right');
-//     else if(offset <= -2) card.classList.add('is-left-2');
-//     else if(offset >= 2) card.classList.add('is-right-2');
-//   });
-
-  
-//   idxEl.textContent = (index + 1) + ' / ' + cards.length;
-// }
-
-//   function go(n){
-//     index = clamp(n, 0, cards.length - 1);
-//     applyCoverflow();
-//     resetAutoPlay();
-//   }
-
-//   function nextSlide(){
-//     index = (index + 1) % cards.length;
-//     applyCoverflow();
-//   }
-
-//   function prevSlide(){
-//     index = (index - 1 + cards.length) % cards.length;
-//     applyCoverflow();
-//   }
-
-
-//   function startAutoPlay(){
-//     stopAutoPlay();
-//     autoPlayInterval = setInterval(nextSlide, 5000);
-//   }
-//   function stopAutoPlay(){ clearInterval(autoPlayInterval); }
-//   function resetAutoPlay(){ startAutoPlay(); }
-
- 
-//   prev.addEventListener('click', () => { prevSlide(); resetAutoPlay(); });
-//   next.addEventListener('click', () => { nextSlide(); resetAutoPlay(); });
-
-
-//   track.addEventListener('keydown', (e) => {
-//     if(e.key === 'ArrowLeft'){ e.preventDefault(); prevSlide(); resetAutoPlay(); }
-//     if(e.key === 'ArrowRight'){ e.preventDefault(); nextSlide(); resetAutoPlay(); }
-//   });
-//   track.tabIndex = 0;
-
-
-//   cards.forEach((card, i) => card.addEventListener('click', () => { go(i); }));
-
- 
-//   let startX = 0;
-//   track.addEventListener('pointerdown', (e)=>{ startX = e.clientX; });
-//   track.addEventListener('pointerup', (e)=>{
-//     const dx = e.clientX - startX;
-//     if(Math.abs(dx) > 40){
-//       if(dx < 0) nextSlide(); else prevSlide();
-//       resetAutoPlay();
-//     }
-//   });
-
- 
-//   applyCoverflow();
-//   startAutoPlay();
-
- 
-//   track.addEventListener('mouseenter', stopAutoPlay);
-//   track.addEventListener('mouseleave', startAutoPlay);
-
-  
-
-//       setOffsets();
-//       startAuto();
-
-     
-//       window.addEventListener('resize', setOffsets);
-
-// })();
 
 // COTACT FORM
  (function(){
@@ -385,8 +290,6 @@
   document.getElementById("year").textContent = new Date().getFullYear();
 
 
-  
-=======
 // mobile nav toggle
 (function(){
       const toggle = document.getElementById('navToggle');
@@ -568,101 +471,6 @@
     })();
 
 
-// (function(){
-//   const track = document.getElementById('cfTrack');
-//   const cards = Array.from(track.querySelectorAll('.cf-card'));
-//   const prev = document.getElementById('cfPrev');
-//   const next = document.getElementById('cfNext');
-//   const idxEl = document.getElementById('cfIndex');
-
-//   let index = 0; 
-//   let autoPlayInterval;
-
-//   function clamp(n, min, max){ return Math.max(min, Math.min(n, max)); }
-
-//  function applyCoverflow(){
-//   cards.forEach((card, i) => {
-//     const offset = i - index;
-//     card.classList.remove('is-center','is-left','is-right','is-left-2','is-right-2');
-//     card.setAttribute('aria-selected', offset === 0 ? 'true' : 'false');
-
-//     if(offset === 0) card.classList.add('is-center');
-//     else if(offset === -1) card.classList.add('is-left');
-//     else if(offset === 1) card.classList.add('is-right');
-//     else if(offset <= -2) card.classList.add('is-left-2');
-//     else if(offset >= 2) card.classList.add('is-right-2');
-//   });
-
-  
-//   idxEl.textContent = (index + 1) + ' / ' + cards.length;
-// }
-
-//   function go(n){
-//     index = clamp(n, 0, cards.length - 1);
-//     applyCoverflow();
-//     resetAutoPlay();
-//   }
-
-//   function nextSlide(){
-//     index = (index + 1) % cards.length;
-//     applyCoverflow();
-//   }
-
-//   function prevSlide(){
-//     index = (index - 1 + cards.length) % cards.length;
-//     applyCoverflow();
-//   }
-
-
-//   function startAutoPlay(){
-//     stopAutoPlay();
-//     autoPlayInterval = setInterval(nextSlide, 5000);
-//   }
-//   function stopAutoPlay(){ clearInterval(autoPlayInterval); }
-//   function resetAutoPlay(){ startAutoPlay(); }
-
- 
-//   prev.addEventListener('click', () => { prevSlide(); resetAutoPlay(); });
-//   next.addEventListener('click', () => { nextSlide(); resetAutoPlay(); });
-
-
-//   track.addEventListener('keydown', (e) => {
-//     if(e.key === 'ArrowLeft'){ e.preventDefault(); prevSlide(); resetAutoPlay(); }
-//     if(e.key === 'ArrowRight'){ e.preventDefault(); nextSlide(); resetAutoPlay(); }
-//   });
-//   track.tabIndex = 0;
-
-
-//   cards.forEach((card, i) => card.addEventListener('click', () => { go(i); }));
-
- 
-//   let startX = 0;
-//   track.addEventListener('pointerdown', (e)=>{ startX = e.clientX; });
-//   track.addEventListener('pointerup', (e)=>{
-//     const dx = e.clientX - startX;
-//     if(Math.abs(dx) > 40){
-//       if(dx < 0) nextSlide(); else prevSlide();
-//       resetAutoPlay();
-//     }
-//   });
-
- 
-//   applyCoverflow();
-//   startAutoPlay();
-
- 
-//   track.addEventListener('mouseenter', stopAutoPlay);
-//   track.addEventListener('mouseleave', startAutoPlay);
-
-  
-
-//       setOffsets();
-//       startAuto();
-
-     
-//       window.addEventListener('resize', setOffsets);
-
-// })();
 
 // COTACT FORM
  (function(){
@@ -771,4 +579,4 @@
 
 // current year for footer
   document.getElementById("year").textContent = new Date().getFullYear();
->>>>>>> cb6eafd (initial commit)
+

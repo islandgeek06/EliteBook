@@ -1288,7 +1288,7 @@
 }
 
 .category:nth-child(2) {
-    background: #044645;
+    background:  #1F6B3A;
 }
 
 .service-btn {
@@ -1321,7 +1321,7 @@
     width: 60px;
     height: 60px;
     border-radius: 50px;
-    background: rgb(177, 127, 76);
+    background: rgb(200, 168, 78);
     z-index: -1;
     transition: all ease 0.5s;
     margin-top: -.6rem;
@@ -1338,7 +1338,7 @@
     color: rgb(207, 230, 245);
     height: 100%;
     padding: 5rem 0;
-    background: #044645;
+    background:  #1F6B3A;
 }
 .azure {
     display: flex;
@@ -1400,7 +1400,7 @@
     font-family: "Ubuntu", serif;
     font-size: 3rem;
     letter-spacing: 2px;
-    color: rgb(172, 155, 113);
+    color: rgb(200, 168, 78);
 }
 
 .ser_info p {
@@ -1427,7 +1427,7 @@
     padding: 40px 20px;
     border-radius: 20rem;
     transition: all ease-in-out;
-    box-shadow: 5px 7px rgb(172, 155, 113);
+    box-shadow: 5px 7px rgb(200, 168, 78);
     border-radius: 8px;
     background: transparent;
 }
@@ -1560,7 +1560,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* *************SECTION FOUR */
+/* *************SECTION FOUR Tax-Ready   */
 #tax-ready{
       font-family: "Ubuntu", serif;
       color: var(--ink);
@@ -1602,7 +1602,7 @@
 
     /* Right: Feature list card */
     .tax-card{
-      background: color-mix(in srgb, rgb(172, 155, 113) 88%, var(--sand) 12%);
+      background: color-mix(in srgb, rgb(200, 168, 78) 88%, var(--sand) 12%);
       border: 1px solid color-mix(in srgb, var(--deep-teal) 20%, transparent);
       border-radius: 16px;
       box-shadow: 0 14px 40px color-mix(in srgb, var(--deep-teal) 12%, transparent);
@@ -1663,17 +1663,14 @@
     }
 
 
-/* **************SECTION FIVE** */
+/* **************SECTION FIVE  BUSINESS ADVISORY** */
 #advisory{
       font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, Noto Sans;
       color: var(--ink);
-      /* background:
-        radial-gradient(1200px 600px at 90% -20%, color-mix(in srgb, var(--gold) 12%, transparent), transparent),
-        radial-gradient(1000px 600px at 0% 120%, color-mix(in srgb, var(--deep-teal) 12%, transparent), transparent),
-        var(--bg); */
       padding: clamp(2rem, 4vw, 4rem) 1rem;
       background:  #044645;
     }
+
     .advisory-wrap{
       width: min(1100px, 100%);
       margin: 0 auto;
@@ -1682,6 +1679,7 @@
       grid-template-columns: 1fr 1.2fr; /* reverse order */
       align-items: start;
     }
+
     @media (max-width: 860px){
       .advisory-wrap{ grid-template-columns: 1fr; }
     }
@@ -1689,7 +1687,7 @@
     #advisory-title{
       margin: 0 0 .25rem;
       font-size: 3rem;
-      color: rgb(233, 165, 28);
+      color: rgb(200, 168, 78);
       letter-spacing: .2px;
       font-family: "Ubuntu", serif;
       text-transform: capitalize;
@@ -1705,7 +1703,7 @@
 
     /* Card */
     .advisory-card{
-      background: color-mix(in srgb, rgb(172, 155, 113) 88%, #044645 12%);
+      background: color-mix(in srgb, rgb(200, 168, 78) 88%, #044645 12%);
       border: 1px solid color-mix(in srgb, var(--deep-teal) 20%, transparent);
       border-radius: 16px;
       box-shadow: 0 14px 40px color-mix(in srgb, var(--deep-teal) 12%, transparent);
@@ -1766,7 +1764,7 @@
       font-family: "Ubuntu", serif;
     }
 
-/* **************SECTION SIX** */
+/* **************SECTION SIX INVENTORY** */
 .section {
     max-width: 1200px;
     margin: 72px auto;
@@ -1987,6 +1985,22 @@
 
 
 /* **************BOOKING FORM */
+#book-noww {
+  margin-top: 15rem;
+    background: transparent;
+    /* keep transparent if placed on colored section */
+    font-family: "Ubuntu", serif;
+    color: var(--ink);
+    padding: clamp(2rem, 3vw, 3rem) 1rem;
+    display: grid;
+    place-items: center;
+    /* background-color: #000; */
+    background:
+  radial-gradient(1200px 600px at 90% -20%, color-mix(in srgb, var(--gold) 12%, transparent), transparent),
+  radial-gradient(1000px 600px at 0% 120%, color-mix(in srgb, var(--deep-teal) 12%, transparent), transparent),
+  var(--bg);
+}
+
 .book-form {
   /* background: url("stock/images.png"); */
   width: 100%;
@@ -2110,7 +2124,7 @@
     }
 
     .logo-img{
-      width:min(190px, 45vw) !important;
+      width:min(250px, 45vw) !important;
       block-size:auto;
       display:block;
       filter: drop-shadow(0 6px 18px color-mix(in srgb, var(--deep-teal) 18%, transparent));
@@ -2134,10 +2148,10 @@
 
     .footer-col h4{
       margin:0 0 .6rem;
-      color: rgb(233, 165, 28);
+      color: rgb(200, 168, 78);
       font-family: "Ubuntu", serif;
-      font-size:2rem; 
-      letter-spacing:.3px;
+      font-size:  2.5rem; 
+      letter-spacing: 1px;
     }
 
     .footer-list{
