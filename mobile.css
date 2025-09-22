@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     padding: 0;
     margin: 0;
@@ -96,4 +97,104 @@
     .footer__container {
       margin-inline: auto;
     }
+=======
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*=============== BREAKPOINTS ===============*/
+@media only screen and (max-width:700px){
+    .nav_items{
+        position: absolute;
+        top: -1%;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 5em 0 2em 0;
+        gap: 0.9rem;
+        background-color: #fff066;
+        transition: 0.5s;
+        z-index: -1;
+        transform: translateY(-100%);
+        flex-direction: column;
+    }
+    .item-nav{
+        flex-direction: column;
+    }
+    .nav_items.open{
+        transform: translate(0);
+    }
+    .nav_menu{
+        display: block;
+        font-size: 2em;
+    }
+}
+/* For small devices */
+@media screen and (max-width: 320px) {
+    .footer__container {
+      margin-inline: 1rem;
+    }
+
+    .footer__data {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+    }
+  }
+  
+
+  
+  @media screen and (min-width: 576px) {
+    .footer__data {
+      grid-template-columns: repeat(3, max-content);
+    }
+  }
+
+  
+  @media screen and (min-width: 768px) {
+    .footer__container {
+      grid-template-columns: repeat(2, max-content);
+      justify-content: space-between;
+    }
+  }
+
+  
+  /* For large devices */
+  @media screen and (min-width: 1150px) {
+    .footer {
+      padding-block: 6rem 3rem;
+    }
+    .footer__data {
+      grid-template-columns: repeat(4, max-content);
+      column-gap: 4.5rem;
+    }
+    .footer__logo, 
+    .footer__title {
+      font-size: var(--h2-font-size);
+      margin-bottom: 1.5rem;
+    }
+    .footer__links {
+      row-gap: 1rem;
+    }
+    .footer__social {
+      column-gap: 1.5rem;
+    }
+    .footer__social-link {
+      font-size: 1.5rem;
+    }
+    .footer__copy {
+      margin-top: 7.5rem;
+    }
+  }
+
+  
+  @media screen and (min-width: 1220px) {
+    .footer__container {
+      margin-inline: auto;
+    }
+>>>>>>> cb6eafd (initial commit)
   }

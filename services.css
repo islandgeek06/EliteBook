@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -1102,4 +1103,1111 @@
       color: color-mix(in srgb,  var(--deep-teal) 70%, transparent);
       font-size:.92rem;
       font-family: "Ubuntu", serif;
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ******************COMPANY HERO SECTION */
+.company_section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+    padding: 10px 20%;
+    gap: 100px;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 60, 0.6), rgba(0, 0, 60, 0.6));
+}
+
+.about-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.serv-hero::before {
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+
+}
+
+.serv-hero_title {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    position: relative;
+    margin-top: -40rem;
+    font-family: "Ubuntu", serif;
+}
+
+.serv-hero_title h1 {
+    font-size: 7rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Hedvig Letters Serif', serif;
+    letter-spacing: 3px;
+}
+
+.serv-hero_title span {
+    display: block;
+    padding-left: 500px;
+    font-family: 'Hedvig Letters Serif', serif;
+    letter-spacing: 3px;
+}
+
+.serv-hero_title h1 small {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: rgb(207, 230, 245);
+    width: 400px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    letter-spacing: 2px;
+    line-height: 30px;
+    font-family: "Ubuntu", serif;
+}
+
+.serv-hero_Bottom {
+    width: 100%;
+    display: flex;
+    z-index: 99;
+
+}
+
+.serv-hero_Content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.serv-hero_Content p {
+    color: rgb(207, 230, 245);
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: "Ubuntu", serif;
+    letter-spacing: 3px;
+    line-height: 30px;
+}
+
+/* *************SECTION ONE */
+.categories {
+    /* background: rgba(3, 14, 67);  */
+    color: #ffffff;
+    padding: 5rem 0;
+    height: 36rem;
+    margin-top: 10rem;
+    /* margin-bottom: 25rem; */
+}
+
+.categories h1 {
+    line-height: 1;
+    margin-bottom: 2.5rem;
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-family: "Ubuntu", serif;
+    margin-top: 5rem;
+    color: #044645;
+    line-height: 1.2;
+}
+
+.categories-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 4rem;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.categories-containerr {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 4rem;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.categories-left p {
+    margin: 1rem 0 5rem;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    line-height: 30px;
+    font-family: "Ubuntu", serif;
+    color: rgba(29, 35, 50, 1);
+}
+
+.categories-right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.category {
+    background:
+    radial-gradient(1200px 600px at 90% -20%, color-mix(in srgb, var(--gold) 12%, transparent), transparent),
+    radial-gradient(1000px 600px at 0% 120%, color-mix(in srgb, var(--deep-teal) 12%, transparent), transparent),
+    var(--bg); 
+    padding: 2rem;
+    border-radius: 2rem;
+    transition: all ease-in-out;
+    box-shadow: 7px 15px 7px rgb(172, 155, 113);
+}
+
+.category-icon {
+    background: rgb(172, 155, 113);
+    padding: 0.7rem;
+    border-radius: 0.9rem;
+    color: rgba(29, 35, 50, 1);
+}
+
+.category h5 {
+    margin: 2rem 0 1rem;
+    color: rgb(207, 230, 245);
+    text-transform: capitalize;
+    font-family: "Ubuntu", serif;
+    letter-spacing: 3px;
+}
+
+.category:nth-child(2) {
+    background: #044645;
+}
+
+.service-btn {
+    padding: 5px 30px;
+    display: inline-block;
+    margin: 10px 5px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: 0.5s;
+    font-size: 1.2rem;
+    position: relative;
+    color: rgb(207, 230, 245);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.service-btn:hover {
+    color: rgb(21, 41, 52);
+    font-weight: bolder;
+}
+
+.service-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background: rgb(177, 127, 76);
+    z-index: -1;
+    transition: all ease 0.5s;
+    margin-top: -.6rem;
+
+}
+
+.service-btn:hover:before {
+    width: 100%;
+    color: rgb(241, 245, 250);
+}
+
+/* ***************SECTION TWO PAYROLL */
+.ser-azure {
+    color: rgb(207, 230, 245);
+    height: 100%;
+    padding: 5rem 0;
+    background: #044645;
+}
+.azure {
+    display: flex;
+    max-width: 1700px;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center !important;
+}
+
+#azure-service {
+    position: relative;
+
+}
+
+#azure-service::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 65%;
+    width: 100%;
+    height: 100%;
+    background-image: url("stock/save2.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+}
+
+#azure-service::before {
+    position: absolute;
+    content: '';
+    left: -10%;
+    top: -30%;
+    width: 70%;
+    height: 100%;
+    background: url("stock/save2.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.first_col {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-gap: 2rem;
+}
+
+.ser_info h4 {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: rgb(207, 230, 245);
+}
+
+.ser_info h2 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+    font-family: "Ubuntu", serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    color: rgb(172, 155, 113);
+}
+
+.ser_info p {
+    font-size: 1.2rem;
+    color: rgb(207, 230, 245);
+    line-height: 35px;
+    letter-spacing: 2px;
+    font-family: "Ubuntu", serif;
+}
+
+.second-col {
+    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+}
+
+.feature-box {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 20px;
+    border-radius: 20rem;
+    transition: all ease-in-out;
+    box-shadow: 5px 7px rgb(172, 155, 113);
+    border-radius: 8px;
+    background: transparent;
+}
+
+.feature-box:hover i::after {
+    height: 100%;
+}
+
+.feature-box h3 {
+    text-transform: capitalize;
+    font-family: "Ubuntu", serif;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.feature-box p {
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+    font-family: "Ubuntu", serif;
+}
+
+/* *************SECTION THREE Financial Reporting */
+.features {
+    margin-top: 0;
+    width: 100%;
+    margin-bottom: 10rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.features .title {
+    text-align: left;
+    margin-top: 7rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    height: 75vh;
+    background: url("stock/wave\ 5.png");
+    object-fit: cover;
+    background-size: cover;
+    padding-top: 2rem;
+}
+
+.features .title h2 {
+    margin-bottom: 0.813rem;
+    color:  #044645;
+    font-family: "Ubuntu", serif;
+}
+
+.feature-middle h2 {
+    font-size: 3rem;
+    padding-top: 0.7rem;
+    font-family: "Ubuntu", serif;
+    text-transform: uppercase;
+}
+
+.feature-middle p {
+    font-size: 1.2rem;
+    font-family: "Ubuntu", serif;
+    letter-spacing: 0.71px;
+    color: #0000;
+}
+
+.feature-middle h2 {
+    color: #cd6619;
+}
+
+.feature-middle p {
+    color: rgba(29, 35, 50, 1);
+}
+
+.feature_img {
+    text-align: right;
+}
+
+.margin_top_up {
+    margin-top: -47rem;
+}
+
+.boxes {
+    margin-bottom: 2rem;
+}
+
+.single_feature {
+    padding: 2.5rem 2.5rem 2.438rem 3.125rem;
+    position: relative;
+    border-radius: 1.563rem;
+    height: 100%;
+    max-height: 225px;
+    -webkit-box-shadow: 0 0.938rem 5rem 0 rgb(0 0 0 / 1%);
+    box-shadow: 0 0.900rem 1rem 0 rgb(172, 155, 113);
+    transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    background:
+    radial-gradient(1200px 600px at 90% -20%, color-mix(in srgb, var(--gold) 12%, transparent), transparent),
+    radial-gradient(1000px 600px at 0% 120%, color-mix(in srgb, var(--deep-teal) 12%, transparent), transparent),
+    var(--bg); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bluveit {
+    color: #cd6619;
+    font-weight: bold;
+}
+
+.single_feature h4 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: rgb(207, 230, 245);
+    font-family: "Ubuntu", serif;
+}
+
+.single_feature:hover {
+    color: rgb(207, 230, 245);
+    box-shadow: 0 3rem 3rem rgba(3, 14, 67);
+}
+
+.single_feature p {
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* *************SECTION FOUR */
+#tax-ready{
+      font-family: "Ubuntu", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 600px at 90% -20%, color-mix(in srgb, var(--gold) 12%, transparent), transparent),
+        radial-gradient(1000px 600px at 0% 120%, color-mix(in srgb, var(--deep-teal) 12%, transparent), transparent),
+        var(--bg);
+      padding: clamp(2rem, 4vw, 4rem) 1rem;
+    }
+
+    .tax-wrap{
+      width: min(1100px, 100%);
+      margin: 0 auto;
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: 1.2fr 1fr;
+      align-items: start;
+    }
+    @media (max-width: 860px){
+      .tax-wrap{ grid-template-columns: 1fr; }
+    }
+
+    /* Left: Heading + copy */
+    #tax-title{
+      margin: 0 0 .25rem;
+      font-size: 3rem;
+      color: var(--deep-teal);
+      letter-spacing: .2px;
+      text-transform: capitalize;
+    }
+    .tax-sub{
+      margin: 0;
+      color: color-mix(in srgb, rgb(207, 230, 245) 78%, transparent);
+      line-height: 1.6;
+      max-width: 62ch;
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+    }
+
+    /* Right: Feature list card */
+    .tax-card{
+      background: color-mix(in srgb, rgb(172, 155, 113) 88%, var(--sand) 12%);
+      border: 1px solid color-mix(in srgb, var(--deep-teal) 20%, transparent);
+      border-radius: 16px;
+      box-shadow: 0 14px 40px color-mix(in srgb, var(--deep-teal) 12%, transparent);
+      padding: 1rem;
+    }
+
+    .tax-list{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: .6rem;
+    }
+    .tax-item{
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: start;
+      gap: .6rem;
+      padding: .6rem .4rem;
+      border-radius: 12px;
+      transition: background .2s ease, transform .12s ease, border-color .2s ease;
+      border: 1px solid transparent;
+    }
+    .tax-item:hover{
+      background: color-mix(in srgb, var(--deep-teal) 8%, transparent);
+      border-color: color-mix(in srgb, var(--deep-teal) 18%, transparent);
+      transform: translateY(-1px);
+    }
+
+    .tick{
+      width: 25px; 
+      height: 25px; 
+      border-radius: 6px;
+      display: grid; 
+      place-items: center;
+      background: color-mix(in srgb, var(--deep-teal) 12%, transparent);
+      color: var(--home); /* warm accent for the check */
+      flex: 0 0 auto;
+    }
+    .tick svg{ width: 14px; height: 14px; }
+
+    .tax-text{
+      color: color-mix(in srgb, #044645 92%, transparent);
+      line-height: 1.5;
+      font-family: "Ubuntu", serif;
+      font-size: 1.5rem;
+    }
+
+    /* Eyebrow */
+    .eyebrow{
+      font-size: .85rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: .25rem;
+      display: inline-block;
+    }
+
+
+/* **************SECTION FIVE** */
+#advisory{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, Noto Sans;
+      color: var(--ink);
+      /* background:
+        radial-gradient(1200px 600px at 90% -20%, color-mix(in srgb, var(--gold) 12%, transparent), transparent),
+        radial-gradient(1000px 600px at 0% 120%, color-mix(in srgb, var(--deep-teal) 12%, transparent), transparent),
+        var(--bg); */
+      padding: clamp(2rem, 4vw, 4rem) 1rem;
+      background:  #044645;
+    }
+    .advisory-wrap{
+      width: min(1100px, 100%);
+      margin: 0 auto;
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: 1fr 1.2fr; /* reverse order */
+      align-items: start;
+    }
+    @media (max-width: 860px){
+      .advisory-wrap{ grid-template-columns: 1fr; }
+    }
+
+    #advisory-title{
+      margin: 0 0 .25rem;
+      font-size: 3rem;
+      color: rgb(233, 165, 28);
+      letter-spacing: .2px;
+      font-family: "Ubuntu", serif;
+      text-transform: capitalize;
+    }
+    .advisory-sub{
+      margin: 0;
+      color: color-mix(in srgb, rgb(207, 230, 245) 78%, transparent);
+      line-height: 1.6;
+      max-width: 62ch;
+      font-size: 1.2rem;
+      font-family: "Ubuntu", serif;
+    }
+
+    /* Card */
+    .advisory-card{
+      background: color-mix(in srgb, rgb(172, 155, 113) 88%, #044645 12%);
+      border: 1px solid color-mix(in srgb, var(--deep-teal) 20%, transparent);
+      border-radius: 16px;
+      box-shadow: 0 14px 40px color-mix(in srgb, var(--deep-teal) 12%, transparent);
+      padding: 1rem;
+    }
+
+    .advisory-list{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: .6rem;
+    }
+    .advisory-item{
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: start;
+      gap: .6rem;
+      padding: .6rem .4rem;
+      border-radius: 12px;
+      transition: background .2s ease, transform .12s ease, border-color .2s ease;
+      border: 1px solid transparent;
+    }
+    .advisory-item:hover{
+      background: color-mix(in srgb, var(--deep-teal) 8%, transparent);
+      border-color: color-mix(in srgb, var(--deep-teal) 18%, transparent);
+      transform: translateY(-1px);
+    }
+
+    .tick{
+      width: 25px; 
+      height: 25px; 
+      border-radius: 6px;
+      display: grid; 
+      place-items: center;
+      background: color-mix(in srgb, var(--deep-teal) 12%, transparent);
+      color: var(--home);
+      flex: 0 0 auto;
+    }
+    .tick svg{ width: 14px; height: 14px; }
+
+    .advisory-text{
+      color: color-mix(in srgb, #044645 92%, transparent);
+      line-height: 1.5;
+      font-size: 1.5rem;
+      font-family: "Ubuntu", serif;
+    }
+
+    .eyebrow{
+      font-size: 1rem;
+      font-weight: bolder;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #044645;
+      margin-bottom: .25rem;
+      display: inline-block;
+      margin-bottom: 1rem;
+      font-family: "Ubuntu", serif;
+    }
+
+/* **************SECTION SIX** */
+.section {
+    max-width: 1200px;
+    margin: 72px auto;
+    padding: 0 20px;
+    margin-top: 10rem;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 28px;
+    align-items: start;
+}
+
+/* Left column (intro) */
+.intro {
+    position: sticky;
+    top: 24px;
+    align-self: start;
+    background: linear-gradient(180deg, var(--panel), transparent);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    backdrop-filter: blur(8px);
+    box-shadow: var(--shadow);
+    margin-right: 4rem;
+}
+.kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 10px;
+}
+.kicker::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, var(--accent), transparent 60%), var(--accent);
+    filter: drop-shadow(0 0 6px var(--accent));
+}
+.title {
+    font-size: clamp(24px, 3vw, 36px);
+    line-height: 1.15;
+    margin: 4px 0 12px;
+    letter-spacing: -0.02em;
+    font-family: "Ubuntu", serif;
+    color:  #044645;
+}
+
+.titlee {
+    font-size: clamp(24px, 3vw, 36px);
+    line-height: 1.15;
+    margin: 4px 0 12px;
+    letter-spacing: -0.02em;
+    color: rgb(172, 155, 113);
+    font-family: "Ubuntu", serif;
+}
+
+.desc {
+    color: var(--muted);
+    margin: 0 0 18px;
+    font-family: "Ubuntu", serif;
+}
+
+.descc {
+    color: rgb(207, 230, 245);
+    margin: 0 0 18px;
+    font-family: "Ubuntu", serif;
+    letter-spacing: 2px;
+    line-height: 30px;
+}
+
+.bullets {
+    display: grid;
+    gap: 10px;
+    margin: 18px 0 8px;
+    padding: 0;
+    list-style: none;
+}
+.bullets li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    color:  rgb(233, 165, 28);
+    background: color-mix(in oklab, var(--panel), transparent 40%);
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-family: "Ubuntu", serif;
+}
+.bullets svg {
+    flex: 0 0 auto;
+    margin-top: 2px;
+    opacity: 0.9;
+}
+
+/* Right column (grid) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 16px;
+}
+
+.hr-linee {
+    border: none;
+    border-top: 5px solid #044645;
+    margin: 0 auto;
+    max-width: 900px;
+    opacity: 0.4;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.card {
+    position: relative;
+    background: linear-gradient(180deg, color-mix(in oklab, var(--panel) 70%, transparent), color-mix(in oklab, var(--panel) 30%, transparent));
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px;
+    min-height: 140px;
+    overflow: clip;
+    transition: transform 0.35s cubic-bezier(.2,.8,.2,1), box-shadow 0.35s cubic-bezier(.2,.8,.2,1), border-color 0.35s;
+    backdrop-filter: blur(6px);
+    will-change: transform;
+}
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0,0,0,.28);
+    border-color: color-mix(in oklab, var(--accent), var(--border) 60%);
+}
+.card:focus-within {
+    outline: 2px solid color-mix(in oklab, var(--accent), transparent 30%);
+    outline-offset: 2px;
+}
+.iconn {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: radial-gradient(20px 20px at 30% 30%, color-mix(in oklab, rgb(233, 165, 28), rgb(233, 165, 28) 20%), transparent 70%), 
+    color-mix(in oklab, var(--accent), rgb(233, 165, 28) 75%);
+    border: 1px solid color-mix(in oklab, rgb(233, 165, 28), rgb(233, 165, 28) 40%);
+    margin-bottom: 12px;
+    box-shadow: inset 0 0 24px rgba(0,0,0,.12);
+}
+.card h3 {
+    margin: 4px 0 6px;
+    font-size: 18px;
+    letter-spacing: -.01em;
+}
+.card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+.chip {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: color-mix(in oklab, var(--accent), white 20%);
+    background: color-mix(in oklab, var(--accent), transparent 80%);
+    border: 1px solid color-mix(in oklab, var(--accent), var(--border) 15%);
+    padding: 5px 8px;
+    border-radius: 999px;
+    backdrop-filter: blur(4px);
+}
+
+/* Reveal on scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(16px) scale(.98);
+    transition: opacity 0.7s ease, transform 0.7s cubic-bezier(.2,.8,.2,1);
+    transition-delay: var(--delay, 0ms);
+}
+.reveal.in-view {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+@media (prefers-reduced-motion: reduce) {
+    .card,
+    .reveal {
+        transition: none !important;
+    }
+}
+
+/* Responsive */
+@media (max-width: 1080px) {
+    .services {
+        grid-template-columns: 1fr;
+    }
+    .intro {
+        position: static;
+    }
+}
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+}
+@media (max-width: 560px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.intro-button {
+  background-color: #044645 !important;
+}
+
+
+
+/* **************BOOKING FORM */
+.book-form {
+  /* background: url("stock/images.png"); */
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  box-shadow: 0 14px 40px color-mix(in srgb, var(--deep-teal) 12%, transparent);
+}
+
+.form-content-detail {
+    margin: 2rem auto 0;
+    padding: 1.5rem;
+    border-radius: 12px;
+    font-family: "Ubuntu", serif;
+    display: flex;
+    margin: auto;
+    margin-bottom: 15rem;
+    margin-top: 15rem;
+    width: 100%;
+    width: min(1200px, 100%);
+}
+
+
+
+.form-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5rem;
+}
+
+.form-introo h1 {
+  font-size: 2.5rem;
+  color: #044645;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-family: "Ubuntu", serif;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.form-introo p {
+  font-size: 1.2rem;
+  line-height: 30px;
+  letter-spacing: 2px;
+  font-family: "Ubuntu", serif;
+  max-width: 650px;
+}
+
+
+
+
+
+/* **************FOOTER SECTION */
+#site-footer{
+      position: relative;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 600px at 90% -20%, color-mix(in srgb, var(--gold) 12%, transparent), transparent),
+        radial-gradient(1000px 600px at 0% 120%, color-mix(in srgb, var(--deep-teal) 12%, transparent), transparent),
+        var(--bg);
+      padding: clamp(3rem, 5vw, 5rem) 1rem 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, Noto Sans;
+      overflow: hidden;
+    }
+
+    /* Curved Top Edge */
+    #site-footer::before{
+      content:"";
+      position:absolute; top:-1px; left:0; width:100%; height:110px;
+      background: var(--bg);
+      mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 150' preserveAspectRatio='none'><path fill='black' d='M0,0 C280,130 1160,-10 1440,120 L1440,0 L0,0 Z'></path></svg>") no-repeat center / cover;
+      -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 150' preserveAspectRatio='none'><path fill='black' d='M0,0 C280,130 1160,-10 1440,120 L1440,0 L0,0 Z'></path></svg>") no-repeat center / cover;
+      z-index:1;
+    }
+
+    /* Decorative background shapes (SVG layer) */
+    .footer-bg-shapes{
+      position:absolute; inset:0; z-index:0; pointer-events:none; opacity:.18;
+    }
+
+    .footer-bg-shapes svg{ width:100%; height:100%; display:block; }
+
+    .footer-wrap{
+      width:min(1200px, 100%);
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+      display: grid;
+      gap: 2rem;
+    }
+
+    /* Grid: 4 columns on desktop, down to 1 on mobile */
+    .footer-grid{
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.4fr;
+      gap: clamp(1rem, 2vw, 2rem);
+    }
+
+    @media (max-width: 980px){
+      .footer-grid { 
+        grid-template-columns: 1fr 1fr; 
+      }
+    }
+
+    @media (max-width: 640px){
+      .footer-grid { 
+        grid-template-columns: 1fr;  
+      }
+    }
+
+    .footer-brand .logo{
+      display:flex; 
+      align-items:flex-start; 
+      gap:1rem; 
+      text-decoration:none;
+      color: var(--deep-teal);
+    }
+
+    .logo-img{
+      width:min(190px, 45vw) !important;
+      block-size:auto;
+      display:block;
+      filter: drop-shadow(0 6px 18px color-mix(in srgb, var(--deep-teal) 18%, transparent));
+    }
+
+    .brand-text { 
+      display:flex; 
+      flex-direction:column; 
+      line-height:1.1; 
+    }
+
+    .footer-brand p{
+      margin:.75rem 0 0; 
+      max-width:36ch;
+      color: color-mix(in srgb, rgb(207, 230, 245) 78%, transparent);
+      font-size: 1.2rem; 
+      line-height:1.5;
+      letter-spacing: 1.5px;
+      font-family: "Ubuntu", serif;
+    }
+
+    .footer-col h4{
+      margin:0 0 .6rem;
+      color: rgb(233, 165, 28);
+      font-family: "Ubuntu", serif;
+      font-size:2rem; 
+      letter-spacing:.3px;
+    }
+
+    .footer-list{
+      list-style:none; 
+      padding:0; 
+      margin:0; 
+      display:grid; 
+      gap:.45rem;
+      font-family: "Ubuntu", serif;
+    }
+
+    .footer-list li a {
+      display:inline-flex; 
+      align-items:center; 
+      gap:.4rem;
+      letter-spacing: 1.5px;
+      color: color-mix(in srgb, rgb(207, 230, 245) 85%, transparent);
+      text-decoration:none; 
+      padding:.2rem 0;
+      border-bottom:1.5px solid transparent;
+      transition: color .2s ease, border-color .2s ease, transform .12s ease;
+    }
+
+    .footer-list li a:hover {
+      color: var(--deep-teal);
+      border-color: color-mix(in srgb, var(--deep-teal) 35%, transparent);
+      transform: translateX(2px);
+    }
+
+    /* Socials */
+    .socials { 
+      display:grid; 
+      gap:.5rem; 
+      margin:.4rem 0 .8rem; 
+    }
+
+    .socials a {
+      display:inline-flex; align-items:center; gap:.5rem;
+      color: color-mix(in srgb, rgb(207, 230, 245) 85%, transparent);
+      text-decoration:none;
+      padding:.28rem .1rem;
+      transition: color .2s ease, transform .12s ease;
+      font-family: "Ubuntu", serif;
+      letter-spacing: 1.5px;
+    }
+
+    .socials a:hover { 
+      color: var(--deep-teal); transform: translateX(2px); 
+    }
+
+    .socials svg { width:18px; height:18px; 
+    }
+
+    .address {
+      margin-top:.6rem; 
+      font-size:.95rem;
+      color: color-mix(in srgb, rgb(207, 230, 245) 75%, transparent);
+      line-height:1.5;
+      font-family: "Ubuntu", serif;
+      letter-spacing: 1.5px;
+    }
+
+    /* Bottom bar */
+    .footer-bottom{ 
+      margin-top: 2rem;
+      border-top: 1px solid color-mix(in srgb, var(--deep-teal) 18%, transparent);
+      padding: .9rem 0;
+      text-align: center;
+      color: color-mix(in srgb,  var(--deep-teal) 70%, transparent);
+      font-size:.92rem;
+      font-family: "Ubuntu", serif;
+
     }
